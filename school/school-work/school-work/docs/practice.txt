@@ -3,4 +3,13 @@ Write a program which can contain 10 digits in an integer array those are 1,3,5,
 Write a program which can contain 10 digits in an string array those are 1,3,5,7,9,11,13,15,17,19 and print the sum of them
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print the max of them
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print the min of them
+Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print in reverse order
+Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and sum one before and one after digit to it, if no neighbout then choose 0
+
+P: find "abc" in string "ttrababcaabc" present of not, if yes which position
+P: find "abc" in string "ttrababcaabc" how many times
+P: find "abc" in string "ttrababcaabc" if find then put * in front of b like a*bc
+
+
+P: 2D array(3X3) which contains integers, write funtions for sum, max and min
 

@@ -1,0 +1,11 @@
+copy a fresh copy of code: git clone https://github.com/gauravawr/vibhu
+
+need to run these commands either in terminal/powershell in location where .git folder is present
+
+update git code locally: git commit -m "***message***"
+update git code remotely: git push
+pull latest code from remote to local: git pull
+
+if ask to update user info then do:
+git config user.email "your-email@gmail.com"
+git config user.name "vibhu"

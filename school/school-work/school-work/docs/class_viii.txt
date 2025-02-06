@@ -1,0 +1,15 @@
+*****************************
+Class:VIII
+*****************************
+
+Notes from the GCSE, Notes from the links, code it, make game/quiz
+
+3.1.4 Sorting algorithms
+
+Merge Sorting
+Bubble Sorting
+
+3.1.3 Searching algorithms
+
+Linear Searching
+Binary Searching

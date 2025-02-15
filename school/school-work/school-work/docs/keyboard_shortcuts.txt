@@ -1,0 +1,4 @@
+comment in: ctrl + k + c
+comment out: ctrl + k + u
+delete line: shift + delete
+formatting code: 

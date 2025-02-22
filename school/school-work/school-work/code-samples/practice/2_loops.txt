@@ -1,0 +1,40 @@
+******************** SUM **************************
+
+Module Program
+    Sub Main()
+        ' Define an array of numbers
+        Dim numbers() As Integer = {10, 20, 30, 40, 50}
+        
+        ' Calculate the sum using a loop
+        Dim total As Integer = 0
+        For Each num As Integer In numbers
+            total = total + num
+        Next
+        
+        ' Display the result
+        Console.WriteLine("The sum of the numbers is: " & total)
+        Console.ReadLine()
+    End Sub
+End Module
+
+******************** MAX **************************
+Module Program
+    Sub Main()
+        ' Define an array of numbers
+        Dim numbers() As Integer = {10, 20, 30, 5, 50, 40}
+        
+        ' Assume the first number is the maximum
+        Dim max As Integer = 0
+        
+        ' Loop through the array to find the maximum number
+        For Each num As Integer In numbers
+            If num > max Then
+                max = num
+            End If
+        Next
+        
+        ' Display the result
+        Console.WriteLine("The maximum number is: " & max)
+        Console.ReadLine()
+    End Sub
+End Module

@@ -9,6 +9,7 @@ Notes from the GCSE, Notes from the links, code it, make game/quiz
 Merge Sorting: divide the array recursively and until single elements then keep merging into 2 pairs and sort then 4 ... when merge 2 pairs then need to go through in for loop for each element
 Bubble Sorting: go through all no's one by one in two for loops
 
+
 3.1.3 Searching algorithms
 
 Linear Searching: go through one by one

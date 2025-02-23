@@ -11,6 +11,9 @@ P: find "abc" in string "ttrababcaabc" present of not, if yes which position
 P: find "abc" in string "ttrababcaabc" how many times
 P: find "abc" in string "ttrababcaabc" if find then put * in front of b like a*bc
 
+P: how many numbers greater than 7 and less than 11 and  = [4,7,0,3,5,4,10,8]
+P: how many same numbers in these a = [4,7,0,3,5,4] and a = [7,3,1,11,9,0]
+
 
 P: 2D array(3X3) which contains integers, write funtions for sum, max and min
 

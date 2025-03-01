@@ -10,7 +10,7 @@ Merge Sorting: divide the array recursively and until single elements then keep 
 Bubble Sorting: go through all no's one by one in two for loops
 
 
-3.1.3 Searching algorithms
+3.1.3 Searching algorithms:21/01/2025
 
 Linear Searching: go through one by one
 Binary Searching: sort first, then divide the list into two and see if it > or < than the middle no

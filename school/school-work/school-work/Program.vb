@@ -1,7 +1,194 @@
-Imports System
 
-Module Program
-    Sub Main(args As String())
-        Console.WriteLine("Hello World!")
+Module AdventureGame
+    Dim playerHealth As Integer = 100
+    Dim playerScore As Integer = 0
+    Dim inventory As New List(Of String)
+    Dim currentLocation As String = "Village"
+    Dim random As New Random()
+
+    Sub Main()
+        Console.WriteLine("Welcome to the Dice Adventure Game!")
+        Console.WriteLine("Explore the world, survive challenges, and complete quests!")
+        ShowMenu()
     End Sub
-End Module
+
+    Sub ShowMenu()
+        While playerHealth > 0
+            Console.WriteLine()
+            Console.WriteLine($"Current Location: {currentLocation}")
+            Console.WriteLine("1. Roll the Dice")
+            Console.WriteLine("2. Change Location")
+            Console.WriteLine("3. Check Inventory")
+            Console.WriteLine("4. Quit Game")
+            Console.Write("Choose an action: ")
+
+            Dim choice As String = Console.ReadLine()
+            Select Case choice
+                Case "1"
+                    RollDiceAndHandleOutcome()
+                Case "2"
+                    ChangeLocation()
+                Case "3"
+                    ShowInventory()
+                Case "4"
+                    Console.WriteLine("Thanks for playing! Goodbye!")
+                    Exit Sub
+                Case Else
+                    Console.WriteLine("Invalid choice. Please try again.")
+            End Select
+        End While
+
+        Console.WriteLine("Game Over! You have been defeated.")
+        Console.WriteLine($"Final Score: {playerScore}")
+    End Sub
+
+    Sub RollDiceAndHandleOutcome()
+        Dim diceRoll As Integer = random.Next(1, 7)
+        Console.WriteLine($"You rolled a {diceRoll}!")
+        Select Case currentLocation
+            Case "Village"
+                HandleVillageEvent(diceRoll)
+            Case "Forest"
+                HandleForestEvent(diceRoll)
+            Case "Cave"
+                HandleCaveEvent(diceRoll)
+        End Select
+        Console.WriteLine($"Health: {playerHealth}, Score: {playerScore}")
+    End Sub
+
+    Sub ChangeLocation()
+        Console.WriteLine("Choose a new location:")
+        Console.WriteLine("1. Village")
+        Console.WriteLine("2. Forest")
+        Console.WriteLine("3. Cave")
+        Console.Write("Enter your choice: ")
+
+        Dim choice As String = Console.ReadLine()
+        Select Case choice
+            Case "1"
+                currentLocation = "Village"
+            Case "2"
+                currentLocation = "Forest"
+            Case "3"
+                currentLocation = "Cave"
+            Case Else
+                Console.WriteLine("Invalid location. Staying in current location.")
+        End Select
+    End Sub
+
+    Sub ShowInventory()
+        Console.WriteLine("Your Inventory:")
+        If inventory.Count = 0 Then
+            Console.WriteLine("Your inventory is empty.")
+        Else
+            For Each item In inventory
+                Console.WriteLine($"- {item}")
+            Next
+        End If
+    End Sub
+
+    Sub HandleVillageEvent(diceRoll As Integer)
+        Select Case diceRoll
+            Case 1
+                Console.WriteLine("A thief steals 10 points from you!")
+                playerScore = Math.Max(0, playerScore - 10)
+            Case 2
+                Console.WriteLine("You found a treasure chest! Gained 50 points.")
+                playerScore += 50
+            Case 3
+                Console.WriteLine("You rested and recovered 20 health.")
+                playerHealth = Math.Min(100, playerHealth + 20)
+            Case 4
+                Console.WriteLine("You helped a villager and received a healing potion!")
+                inventory.Add("Healing Potion")
+            Case 5
+                Console.WriteLine("You stumbled upon a hidden clue for a quest!")
+                inventory.Add("Quest Clue")
+            Case 6
+                Console.WriteLine("You encountered a traveling merchant. Bought a rare artifact!")
+                inventory.Add("Rare Artifact")
+        End Select
+    End Sub
+
+    Sub HandleForestEvent(diceRoll As Integer)
+        Select Case diceRoll
+            Case 1
+                Console.WriteLine("A wild beast attacked! You lost 20 health.")
+                playerHealth -= 20
+            Case 2
+                Console.WriteLine("You found berries. Gained 10 points.")
+                playerScore += 10
+            Case 3
+                Console.WriteLine("You fell into quicksand! Lost 15 health.")
+                playerHealth -= 15
+            Case 4
+                Console.WriteLine("You found an ancient relic! Gained 30 points.")
+                playerScore += 30
+            Case 5
+                Console.WriteLine("A ranger guided you to safety. Gained 20 health.")
+                playerHealth = Math.Min(100, playerHealth + 20)
+            Case 6
+                Console.WriteLine("You discovered a hidden path leading to new adventures!")
+                inventory.Add("Hidden Map")
+        End Select
+    End Sub
+
+    Sub HandleCaveEvent(diceRoll As Integer)
+        Select Case diceRoll
+        
+            Case 1
+                Console.WriteLine("You found a vein of gold! Gained 40 points.")
+                playerScore += 40
+            Case 2
+                Console.WriteLine("A bat swarm attacked! Lost 10 health.")
+                playerHealth -= 10
+            Case 3
+                Console.WriteLine("You discovered a hidden treasure chest!")
+                playerScore += 100
+            Case 4
+                Console.WriteLine("You found ancient runes. Gained knowledge!")
+                inventory.Add("Ancient Runes")
+            Case 5
+                Console.WriteLine("You encountered a good guardian spirit. Gained 50 points.")
+                playerScore += 50
+            Case 6
+                Console.Writeline("You encounter an Evil spirit and must fight it")
+                Dim attack1, elf1, attack2, health1, power1 As Integer
+                power1=10
+                health1=20
+                bandit1 = 20
+                Do
+                    Console.WriteLine("Roll your dice")
+                    banditattack1= Console.ReadLine
+                    If banditattack1<= 3 Then
+                        Console.WriteLine("The spirits shoots energy rays at you and misses")
+                    Else
+                        Console.WriteLine("The spirit hits you with their war hammer and takes away 10 of your health points")
+                        health1 = health1 - 10
+                        Console.WriteLine("You are now on " & health1 & " health points.")
+                    End If
+        
+                    Console.WriteLine("Roll the die again.")
+                    banditcounter1= Console.ReadLine
+                    If banditcounter1<= 3 Then
+                        Console.WriteLine("You attack the spirit and miss")
+                    Else
+                        Console.WriteLine("You attack the spirit and take away " & power1 & " of their health points")
+                        bandit1 = bandit1 - power1
+                        Console.WriteLine("The spirit is now on " & bandit1 & " health points.")
+                    End If
+                Loop Until bandit1 <= 0 or health1 <= 0
+                If bandit1 <= 0 Then
+                    Console.WriteLine("You kill it")
+                Else
+                    Console.WriteLine("It shoots a ray at you and it burns you t a crip")
+                End If
+        
+            End Sub
+        End Module
+        
+        
+        End Select
+    End Sub
+
+

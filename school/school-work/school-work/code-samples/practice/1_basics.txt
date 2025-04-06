@@ -1,7 +1,87 @@
-Imports System
+'give me vb code where i can put all the basic code for children to have a cheat sheet to revise the basis. like declaration of numbers, strings, array of numbers, strings then for loop while loop ex. sum of numbers and alphabets. with comments, proper casing spaces and tabs
 
-Module Program
-    Sub Main(args As String())
-        Console.WriteLine("Hello World!")
+Module CheatSheetForKids
+
+    Sub Main()
+        ' 🟡 1. VARIABLE DECLARATION
+
+        ' Numbers
+        Dim age As Integer = 10
+        Dim height As Double = 145.5
+
+        ' Strings
+        Dim name As String = "Alex"
+        Dim greeting As String = "Hello, " & name & "!"
+
+        Console.WriteLine(greeting)
+
+        ' Booleans
+        Dim isHappy As Boolean = True
+
+        ' Characters
+        Dim grade As Char = "A"c
+
+        ' 🟡 2. ARRAYS
+
+        ' Array of numbers
+        Dim scores() As Integer = {90, 85, 78, 92, 88}
+
+        ' Array of strings
+        Dim fruits() As String = {"Apple", "Banana", "Cherry", "Mango"}
+
+        Console.WriteLine("Fruits:")
+        For Each fruit In fruits
+            Console.WriteLine(" - " & fruit)
+        Next
+
+        ' 🟡 3. FOR LOOP EXAMPLE - Sum of numbers
+        Dim sum As Integer = 0
+        For i As Integer = 0 To scores.Length - 1
+            sum += scores(i)
+        Next
+        Console.WriteLine("Total Score: " & sum)
+
+        ' 🟡 4. WHILE LOOP EXAMPLE - Count letters in name
+        Dim index As Integer = 0
+        Dim letterCount As Integer = 0
+
+        While index < name.Length
+            Console.WriteLine("Letter: " & name(index))
+            letterCount += 1
+            index += 1
+        End While
+
+        Console.WriteLine("Total Letters in name: " & letterCount)
+
+        ' 🟡 5. IF STATEMENTS
+        If age >= 13 Then
+            Console.WriteLine("You're a teenager!")
+        Else
+            Console.WriteLine("You're a kid!")
+        End If
+
+        ' 🟡 6. SELECT CASE (Switch)
+        Select Case grade
+            Case "A"c
+                Console.WriteLine("Excellent!")
+            Case "B"c
+                Console.WriteLine("Very Good!")
+            Case Else
+                Console.WriteLine("Keep trying!")
+        End Select
+
+        ' 🟡 7. FUNCTION CALL EXAMPLE
+        Dim result As Integer = AddTwoNumbers(5, 7)
+        Console.WriteLine("5 + 7 = " & result)
+
+        ' Keep console window open
+        Console.WriteLine("Press any key to exit...")
+        Console.ReadKey()
     End Sub
+
+    ' Function to add two numbers
+    Function AddTwoNumbers(a As Integer, b As Integer) As Integer
+        Return a + b
+    End Function
+
 End Module

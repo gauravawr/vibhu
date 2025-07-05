@@ -60,6 +60,9 @@ Module CheatSheetForKids
             Console.WriteLine("You're a kid!")
         End If
 
+         if numbers(i) > 6 And numbers(i) Mod 2 = 0 Then
+         End if
+
         ' 🟡 6. SELECT CASE (Switch)
         Select Case grade
             Case "A"c
@@ -84,4 +87,27 @@ Module CheatSheetForKids
         Return a + b
     End Function
 
+   Converting Numbers to String
+numbers(i).ToString()
+
 End Module
+
+🟡 ADDING Strings
+       Dim char1 As Char = "A"c
+        Dim char2 As Char = "B"c
+        Dim str1 As String = "Hello"
+        Dim str2 As String = "World"
+
+        ' Combine characters into a string
+        Dim result1 As String = char1 & char2   ' "AB"
+
+        ' Combine string and character
+        Dim result2 As String = str1 & char1    ' "HelloA"
+
+        ' Combine strings
+        Dim result3 As String = str1 & " " & str2   ' "Hello World"
+
+        ' Output results
+        Console.WriteLine(result1)
+        Console.WriteLine(result2)
+        Console.WriteLine(result3)

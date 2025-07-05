@@ -1,15 +1,15 @@
 2025-06-02
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print the sum of them
-Write a program which can contain 10 digits in an string array those are 1,3,5,7,9,11,13,15,17,19 and print the sum of them
+Write a program which can contain 10 digits in an string array those are 1,3,5,7,9,11,13,15,17,19 (in letters) and print the sum of them
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print the max of them
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print the min of them
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print in reverse order it can be printed in different lines
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print in reverse order in one line
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and add 100 to 1st and 5th numner and print in one line
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print how many numbers are greater than 13
-Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and print how many numbers are greater than 13
 Write a program which can contain 10 digits in an integer array those are 1,2,5,8,9,11,12,15,17,19 and print even and odd numbers in two different lines with spaces in between
 Write a program which can contain 10 digits in an integer array those are 1,3,5,7,9,11,13,15,17,19 and sum one before and one after digit to it, if no neighbout then choose 0
+
 Write a program which can contain 10 digits in an integer array those are 1,6,5,6,9,11,6,15,17,19 and find the index of the 3rd match the digit 6
 
 P: find "abc" in string "ttrababcaabc" present of not, if yes which position

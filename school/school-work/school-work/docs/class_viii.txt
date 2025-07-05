@@ -4,6 +4,13 @@ Class:VIII
 
 Notes from the GCSE, Notes from the links, code it, make game/quiz
 
+*** Steps for the each chapter:
+Discussion
+Read the book
+Questions from the back of the chapter
+Extra Questions
+Programming
+
 
 3.1.4 Sorting algorithms:20/01/2025
 
@@ -18,3 +25,7 @@ Quiz:
 
 Linear Searching: go through one by one
 Binary Searching: sort first, then divide the list into two and see if it > or < than the middle no
+
+
+
+
